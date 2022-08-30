@@ -1,6 +1,6 @@
 <?php 
-    $paragraphText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquid, natus vitae quo enim totam corrupti, laudantium voluptatem nihil, quam blanditiis tempore aspernatur! Incidunt labore recusandae, quas iusto vitae iste. Lorem dolor!';
-    $userWord = $_GET['word'];
+    $paragraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aliquid, natus vitae quo enim totam corrupti, laudantium voluptatem nihil, quam blanditiis tempore aspernatur! Incidunt labore recusandae, quas iusto vitae iste. Lorem dolor!';
+    $badword = 'em';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,30 +14,30 @@
     <h1>PHP BADWORDS</h1>
     <p>
         <?php
-            echo $paragraphText;
+            echo $paragraph;
         ?>
     </p>
     <h5>
         Lunghezza testo: 
         <?php 
-             echo strlen($paragraphText);
+             echo strlen($paragraph);
         ?>
     </h5>
     <h5>Parola ricercata: 
         <?php 
-            echo $userWord;
+            echo $badword;
         ?>
     </h5>
     <p>
         <?php 
-            $wordCensored = str_replace($userWord, '***', $paragraphText);
-            echo $wordCensored;
+            $word_censored = str_replace($badword, '***', $paragraph);
+            echo $word_censored;
         ?>
     </p>
     <h5>
         Lunghezza testo: 
         <?php 
-             echo strlen($wordCensored);
+             echo strlen($word_censored);
         ?>
     </h5>
 </body>
